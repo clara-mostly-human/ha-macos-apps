@@ -4,7 +4,7 @@ slug: matter_server
 description: Matter controller for Home Assistant, running natively on macOS
 url: https://github.com/home-assistant-libs/python-matter-server
 arch:
-  - macos-aarch64
+  - aarch64
 init: false
 startup: services
 boot: auto

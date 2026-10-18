@@ -1,9 +1,10 @@
 # Home Assistant apps for macOS
 
 Apps for the native macOS Supervisor (`macos_support` branch of the
-Supervisor). Each app is a normal app folder (`config.yaml`, with
-`arch: [macos-aarch64]` and no image) plus a `native.yaml` recipe that says
-what to install into the app's Python environment and which script to run.
+Supervisor). Each app is a normal app folder (`config.yaml` with no image)
+plus a `native.yaml` recipe; on macOS only apps with a recipe are available. The
+native Supervisor uses this repository as its built-in one, so apps get the
+official slugs (`core_matter_server`) Core's integrations expect. A says what to install into the app's Python environment and which script to run.
 
 | App | What |
 |---|---|
