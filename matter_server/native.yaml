@@ -1,0 +1,3 @@
+requirements:
+  - python-matter-server[server]=={version}
+run: run.py

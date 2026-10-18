@@ -1,0 +1,27 @@
+name: Matter Server
+version: 8.1.2
+slug: matter_server
+description: Matter controller for Home Assistant, running natively on macOS
+url: https://github.com/home-assistant-libs/python-matter-server
+arch:
+  - macos-aarch64
+init: false
+startup: services
+boot: auto
+discovery:
+  - matter
+ports:
+  5580/tcp: 5580
+ports_description:
+  5580/tcp: Matter Server WebSocket API
+options:
+  log_level: info
+  log_level_sdk: error
+  enable_test_net_dcl: false
+  extra_args: []
+schema:
+  log_level: list(critical|error|warning|info|debug|verbose)
+  log_level_sdk: list(none|error|progress|detail|automation)
+  enable_test_net_dcl: bool
+  extra_args:
+    - str
