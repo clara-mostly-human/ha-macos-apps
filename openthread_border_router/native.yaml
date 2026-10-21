@@ -1,0 +1,5 @@
+# otbr-agent needs root (utun interface, IPv6 forwarding, pf anchor), so it
+# runs through the Supervisor's root helper.
+privileged: true
+build: build.sh
+run: run.sh

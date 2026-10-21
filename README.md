@@ -9,6 +9,7 @@ official slugs (`core_matter_server`) Core's integrations expect. A says what to
 | App | What |
 |---|---|
 | `matter_server` | python-matter-server, the Matter controller Home Assistant talks to |
+| `openthread_border_router` | otbr-agent built from a pinned ot-br-posix commit; runs as root through the Supervisor's root helper |
 
 The run script gets the app environment from the Supervisor: `APP_DATA`
 (the app's data folder with `options.json`), `SUPERVISOR` and
