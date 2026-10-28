@@ -10,6 +10,12 @@ startup: services
 boot: auto
 discovery:
   - sf
+# The app brings its integration: it installs custom_components/sf into Home
+# Assistant's config and restarts Core when that changed.
+map:
+  - homeassistant_config:rw
+hassio_api: true
+hassio_role: homeassistant
 ports:
   8883/tcp: 8883
   8484/tcp: 8484

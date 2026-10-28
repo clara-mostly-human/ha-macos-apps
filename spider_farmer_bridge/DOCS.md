@@ -14,10 +14,12 @@ the Matter integration connects to Matter Server.
 
 ## Setup
 
-1. Install and start this app.
-2. Install the Spider Farmer Bridge integration (HACS custom repository
-   `clara-mostly-human/spider_farmer_bridge`). Home Assistant then offers to
-   set it up for this app.
+1. Install and start this app. It brings the Spider Farmer Bridge integration
+   with it: the first start (and every app update) installs the integration
+   into Home Assistant and restarts Home Assistant once to load it.
+2. Home Assistant then shows Spider Farmer Bridge as discovered. Set it up:
+   choose whether Home Assistant may control the devices, and whether to keep
+   everything local (block the Spider Farmer cloud).
 3. Send the controllers' cloud connection to this Mac: on the router, a
    destination NAT rule for the controller's IP address, TCP port 8883, to
    this Mac's IP address, port 8883. When the controller and this Mac share a
