@@ -1,0 +1,22 @@
+name: Spider Farmer Bridge
+version: 3.19.388.1
+slug: spider_farmer_bridge
+description: Local bridge for Spider Farmer GGS grow controllers, running natively on macOS
+url: https://github.com/clara-mostly-human/spider_farmer_bridge
+arch:
+  - aarch64
+init: false
+startup: services
+boot: auto
+discovery:
+  - sf
+ports:
+  8883/tcp: 8883
+  8484/tcp: 8484
+ports_description:
+  8883/tcp: Controllers (TLS; redirect their cloud connection here)
+  8484/tcp: Bridge WebSocket API (Home Assistant only, localhost)
+options:
+  log_level: info
+schema:
+  log_level: list(debug|info|warning|error)
