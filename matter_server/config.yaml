@@ -10,6 +10,10 @@ startup: services
 boot: auto
 discovery:
   - matter
+# The server serves its dashboard on the same port as the WebSocket API
+ingress: true
+ingress_port: 5580
+panel_icon: mdi:matter
 ports:
   5580/tcp: 5580
 ports_description:
