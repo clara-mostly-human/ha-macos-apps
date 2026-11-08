@@ -1,5 +1,5 @@
 name: OpenThread Border Router
-version: 2026.11.7
+version: 2026.11.7.1
 slug: openthread_border_router
 description: OpenThread Border Router, built from source and running natively on macOS
 url: https://github.com/openthread/ot-br-posix
@@ -15,7 +15,7 @@ ports:
 ports_description:
   8081/tcp: OpenThread REST API
 options:
-  device: ""
+  device: null
   baudrate: "460800"
   backbone_interface: en0
   otbr_log_level: notice
@@ -23,7 +23,7 @@ options:
   vendor_name: OpenThread
   model_name: macOS-OTBR
 schema:
-  device: str
+  device: device(subsystem=tty)
   baudrate: list(57600|115200|230400|460800|921600)
   backbone_interface: str
   otbr_log_level: list(debug|info|notice|warning|error|critical)
