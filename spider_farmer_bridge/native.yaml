@@ -1,5 +1,0 @@
-requirements:
-  - aiohttp>=3.9
-  - pyyaml>=6.0
-build: build.sh
-run: run.py
