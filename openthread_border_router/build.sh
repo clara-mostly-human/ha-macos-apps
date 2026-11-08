@@ -3,9 +3,9 @@
 # Run by the Supervisor (as the user) with OUT, SRC_DIR, CACHE, VERSION set.
 set -euo pipefail
 
-# ot-br-posix upstream main, 2026-10-08 ("[dnssd] subscribe to mDNS on the
-# interface of the request", #3613). Bump with the app version.
-COMMIT=65a0ce9f
+# ot-br-posix upstream main, 2026-11-07 ("[telemetry] add child CSL period and
+# sync state to topo entries", #3684). Bump with the app version.
+COMMIT=f8785798
 REPO=https://github.com/openthread/ot-br-posix.git
 
 SRC=$CACHE/ot-br-posix
