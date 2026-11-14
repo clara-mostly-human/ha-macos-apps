@@ -1,5 +1,5 @@
 name: OpenThread Border Router
-version: 2026.11.7.1
+version: 2026.11.14
 slug: openthread_border_router
 description: OpenThread Border Router, built from source and running natively on macOS
 url: https://github.com/openthread/ot-br-posix
