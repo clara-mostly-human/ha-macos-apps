@@ -63,8 +63,11 @@ for _ in $(seq 1 30); do
   curl -s -o /dev/null "http://127.0.0.1:$PORT/node" && break
   sleep 1
 done
+# The token goes to curl on stdin (printf is a shell builtin): a command line is
+# visible to every account on the Mac through ps.
+printf 'Authorization: Bearer %s\n' "$SUPERVISOR_TOKEN" |
 curl -s -o /dev/null -w "discovery sent: %{http_code}\n" -X POST \
-  -H "Authorization: Bearer $SUPERVISOR_TOKEN" -H "Content-Type: application/json" \
+  -H @- -H "Content-Type: application/json" \
   -d "{\"service\":\"otbr\",\"config\":{\"host\":\"127.0.0.1\",\"port\":$PORT}}" \
   "http://$SUPERVISOR/discovery"
 
