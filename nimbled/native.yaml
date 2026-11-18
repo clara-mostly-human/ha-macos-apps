@@ -1,0 +1,4 @@
+# nimbled is a C program built from a pinned ha-macos-bluetooth commit; it needs
+# no root (the controller is a TCP port, its API a Unix socket).
+build: build.sh
+run: run.sh

@@ -1,0 +1,16 @@
+name: nimbled Bluetooth host
+version: 0.4.2
+slug: nimbled
+description: Bluetooth host stack (Apache NimBLE) for the Bluetooth controller on a radio dongle, running natively on macOS
+url: https://github.com/clara-mostly-human/ha-macos-bluetooth
+arch:
+  - aarch64
+init: false
+startup: services
+boot: auto
+discovery:
+  - nimbled
+options:
+  hci_port: 14433
+schema:
+  hci_port: port
