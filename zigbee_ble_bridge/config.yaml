@@ -1,0 +1,22 @@
+name: Zigbee + Bluetooth radio
+version: 2026.11.17
+slug: zigbee_ble_bridge
+description: Serves a dongle running the zigbee-ble firmware - Zigbee to ZHA, its Bluetooth controller to nimbled
+url: https://github.com/clara-mostly-human/thread-rcp-firmware
+arch:
+  - aarch64
+init: false
+startup: system
+boot: auto
+ports:
+  6638/tcp: 6638
+  14433/tcp: 14433
+ports_description:
+  6638/tcp: Zigbee for ZHA (radio type EZSP, socket://127.0.0.1:6638)
+  14433/tcp: Bluetooth HCI for the nimbled app (turn off for Zigbee only)
+options:
+  device: null
+  baudrate: "460800"
+schema:
+  device: device(subsystem=tty)
+  baudrate: list(115200|230400|460800|921600)

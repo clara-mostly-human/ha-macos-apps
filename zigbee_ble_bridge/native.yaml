@@ -1,0 +1,6 @@
+# The bridge is Python (pyserial) from a pinned thread-rcp-firmware commit; it
+# needs no root, only the dongle's serial port.
+requirements:
+  - pyserial==3.5
+build: build.sh
+run: run.py

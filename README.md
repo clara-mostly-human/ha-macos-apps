@@ -10,6 +10,7 @@ official slugs (`core_matter_server`) Core's integrations expect. A recipe says 
 |---|---|
 | `matter_server` | python-matter-server, the Matter controller Home Assistant talks to; its dashboard opens through ingress ("Open Web UI", or the sidebar) |
 | `openthread_border_router` | otbr-agent built from a pinned ot-br-posix commit; runs as root through the Supervisor's root helper |
+| `zigbee_ble_bridge` | Owns a dongle running the zigbee-ble firmware (Zigbee + Bluetooth): serves Zigbee to ZHA as EZSP on `socket://127.0.0.1:6638` and the chip's Bluetooth controller as raw HCI to nimbled; built from a pinned [thread-rcp-firmware](https://github.com/clara-mostly-human/thread-rcp-firmware) commit, whose releases hold the firmware |
 | `nimbled` | Bluetooth for Home Assistant from a radio dongle's Bluetooth controller, with nobody logged in: a NimBLE host daemon built from a pinned [ha-macos-bluetooth](https://github.com/clara-mostly-human/ha-macos-bluetooth) commit; the nimbled integration sets itself up from its discovery |
 
 The run script gets the app environment from the Supervisor: `APP_DATA`
